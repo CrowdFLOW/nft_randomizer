@@ -34,30 +34,31 @@ function output_nft(amount, project, buy_timestamp, wallet, credit_usage_consent
         merit_rank =  "Platinum";
     }
 
-    if (net_user_credit + amount >= 100000 && credit_usage_consent) {
+    else if (net_user_credit + amount >= 100000 && credit_usage_consent) {
         Stats.resetCredits(wallet, "Platinum");
         merit_rank = "Platinum";
     }
 
 
-    if (net_project_amt + amount < target_amt / 3 && net_project_amt + amount >= target_amt / 5) {
+    else if (net_project_amt + amount < target_amt / 3 && net_project_amt + amount >= target_amt / 5) {
         merit_rank = "Gold";
     }
 
-    if (net_user_credit + amount < 100000 && net_user_credit + amount >= 50000 && credit_usage_consent) {
+    else if (net_user_credit + amount < 100000 && net_user_credit + amount >= 50000 && credit_usage_consent) {
         Stats.resetCredits(wallet, "Gold");
         merit_rank = "Gold";
     }
 
 
-    if (net_project_amt + amount < target_amt / 5 && net_project_amt + amount >= target_amt / 10) {
+    else if (net_project_amt + amount < target_amt / 5 && net_project_amt + amount >= target_amt / 10) {
         merit_rank = "Silver";
     }
 
-    if (net_user_credit + amount < 50000 && net_user_credit + amount >= 10000 && credit_usage_consent) {
+    else if (net_user_credit + amount < 50000 && net_user_credit + amount >= 10000 && credit_usage_consent) {
         Stats.resetCredits(wallet, "Silver");
         merit_rank = "Silver";
     }
+    
 
     
     var prioritization_scheme = Stats.getPrioritizationScheme(project);
