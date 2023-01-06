@@ -18,10 +18,10 @@ function output_nft(amount, project, buy_timestamp, wallet, credit_usage_consent
     if (res_factor > 0.999){
         chance_rank = "Platinum";
     }
-    else if (res_factor <= 0.999 && res_factor > 0.99){
+    else if (res_factor <= 0.999 && res_factor > 0.95){
         chance_rank = "Gold";
     }
-    else if (res_factor <= 0.99 && res_factor > 0.9) {
+    else if (res_factor <= 0.95 && res_factor > 0.89) {
         chance_rank = "Silver";
     }
     else {
